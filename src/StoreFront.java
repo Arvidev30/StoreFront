@@ -8,22 +8,28 @@ public class StoreFront {
 
         storeProduct.add(new Biscuits("Milk Bikis ",10,"Has milk content in it.." ));
         storeProduct.add(new Biscuits("Marie Gold ", 10, "Is made up of whole wheat..."));
+        storeProduct.add(new Biscuits("Jim jam ", 15, "Filled with jam in center..."));
 
-        storeProduct.add(new ColdDrinks("Pepsi", 40, "Highly carbonated drink.."));
-        storeProduct.add(new ColdDrinks("Maaza", 45, "Has real mango in it.."));
+        storeProduct.add(new ColdDrinks("Pepsi ", 40, "Highly carbonated drink.."));
+        storeProduct.add(new ColdDrinks("Maaza ", 45, "Has real mango in it.."));
+
+        storeProduct.add(new Tea("Herbal tea ", 50, "Full of herbs..."));
+
 
         listProducts();
 
         System.out.println("\n Order 1:");
-        ArrayList<OrderItem> order1 = new ArrayList<OrderItem>();
+        ArrayList<OrderItem> order1 = new ArrayList<>();
         addItemToOrder(order1,0,4);
         addItemToOrder(order1,1,5);
         printOrder(order1);
 
         System.out.println("Order 2:");
-        ArrayList<OrderItem> order2 = new ArrayList<OrderItem>();
+        ArrayList<OrderItem> order2 = new ArrayList<>();
         addItemToOrder(order2,3,3);
         addItemToOrder(order2, 2,8);
+        addItemToOrder(order2,4,3);
+        addItemToOrder(order2,5,5);
         printOrder(order2);
 
     }
@@ -47,6 +53,7 @@ public class StoreFront {
             salesTotal += item.productForSale.getSalesPrice(item.quantity);
         }
 
-        System.out.printf("Sales Total = %6.2f %n", salesTotal);
+        System.out.printf("%nSales Total = %6.2f %n%n", salesTotal);
+
     }
 }
