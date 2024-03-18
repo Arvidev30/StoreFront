@@ -34,6 +34,7 @@ public class StoreFront {
 
     }
 
+
     public static void listProducts(){
         for (ProductForSale product : storeProduct){
             System.out.println("---------------------");
